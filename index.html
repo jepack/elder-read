@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>老人识字</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="app-header">
+      <h1 id="site-title">老人识字</h1>
+      <p id="site-sub">点一下听一听 · 慢慢读句子</p>
+      <div class="nav-tabs" role="tablist">
+        <button type="button" data-view="home" class="active">学句子</button>
+        <button type="button" data-view="review">生字本</button>
+      </div>
+    </header>
+
+    <section id="view-home">
+      <div id="card-list" class="card-list"></div>
+      <p class="footer-note">把本站加到手机主屏幕，更大、更好点。</p>
+    </section>
+
+    <section id="view-play" hidden>
+      <button type="button" class="back" id="btnBack">← 回课表</button>
+      <h2 id="play-title"></h2>
+      <p class="progress-text" id="progressText">第 1 句</p>
+
+      <div class="panel">
+        <p class="guide" id="guide">点一个字，听一听读音</p>
+        <div class="char-row" id="charRow" aria-live="polite"></div>
+        <p class="selected-tip" id="selectedTip" hidden></p>
+
+        <div class="controls">
+          <button class="btn btn-main" id="btnSentence" type="button">听整句</button>
+          <button class="btn btn-main btn-slow" id="btnOneByOne" type="button">一个一个读</button>
+        </div>
+        <div class="controls twin">
+          <button class="btn btn-warn" id="btnUnknown" type="button" disabled>不认识这个字</button>
+          <button class="btn btn-ok" id="btnNext" type="button">下一句</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-review" hidden>
+      <div class="panel">
+        <p class="guide" id="reviewStats">还没有记下生字。</p>
+        <div id="unknownList" class="unknown-list"></div>
+        <div class="controls" style="margin-top:16px;">
+          <button class="btn btn-warn" id="btnClearUnknown" type="button">清空生字本</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
