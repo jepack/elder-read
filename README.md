@@ -17,4 +17,7 @@ python3 -m http.server 8777
 
 ## 上线
 
-本目录是独立 git 仓库。推 `main` 后由 GitHub Pages 发布（需在仓库 Settings → Pages 选 GitHub Actions）。
+- 仓库：https://github.com/jepack/elder-read
+- 手机打开：https://jepack.github.io/elder-read/
+
+本目录是独立 git 仓库。推 `main` 后由 GitHub Pages（`main` 根目录）发布。
